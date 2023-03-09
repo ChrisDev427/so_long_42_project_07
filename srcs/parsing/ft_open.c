@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 08:36:41 by chris             #+#    #+#             */
-/*   Updated: 2023/03/08 17:34:19 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/03/09 14:33:07 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	ft_open(char *file, int *fd)
 	if (!ft_check_ext(file))
 	{
 		ft_putstr_fd("map file must be '.ber' !\n", 2);
-		system("leaks so_long");
 		exit(EXIT_FAILURE);
 	}
 	*fd = open(file, O_RDONLY);

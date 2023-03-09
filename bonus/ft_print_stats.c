@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 19:04:35 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/08 18:45:47 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/03/09 14:35:06 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static void	ft_print_moves(t_game *game)
 	char	*str;
 
 	str = "moves ";
-	if (game->moves > 8)
+	if (game->moves > 4)
 	{
 		game->link_moves++;
 		ft_printf("moves = %d\n", game->link_moves);

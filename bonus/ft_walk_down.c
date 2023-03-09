@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:31:09 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/08 18:26:08 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/03/09 14:51:02 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static void	ft_handle_collectibles(t_game *game)
 {
 	game->link_y += 4;
 	game->moves++;
-	game->mapcpy[(game->link_y +25) / 64][(game->link_x -12) / 64] = ' ';
-	game->mapcpy[(game->link_y +25) / 64][(game->link_x) / 64] = ' ';
+	game->mapcpy[(game->link_y +25) / 64][(game->link_x -24) / 64] = ' ';
+	game->mapcpy[(game->link_y +25) / 64][(game->link_x +3) / 64] = ' ';
 	system("afplay -v 3 ./music/Get_Rupee.wav &");
 	game->collected++;
 }
@@ -42,8 +42,8 @@ void	ft_walk_down(t_game *game)
 		game->link_y += 4;
 		game->moves++;
 	}
-	if (game->mapcpy[(game->link_y +25) / 64][(game->link_x -12) / 64]
-		== 'C' || game->mapcpy[(game->link_y +25) / 64][(game->link_x)
+	if (game->mapcpy[(game->link_y +25) / 64][(game->link_x -24) / 64]
+		== 'C' || game->mapcpy[(game->link_y +25) / 64][(game->link_x +3)
 			/ 64] == 'C')
 		ft_handle_collectibles(game);
 	if (game->mapcpy[(game->link_y +25) / 64][(game->link_x -24) / 64]

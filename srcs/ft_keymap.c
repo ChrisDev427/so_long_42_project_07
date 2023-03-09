@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:57:41 by chmassa           #+#    #+#             */
-/*   Updated: 2023/02/24 14:36:56 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/03/09 14:32:41 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,9 @@ static void	walk_right(t_game *game)
 		game->win.x += 1;
 		mlx_put_image_to_window(game->win.mlx_ptr, game->win.win_ptr,
 			game->img.link_right, game->win.px, game->win.py);
+		game->img.moves++;
+		ft_printf("moves = %d\n", game->img.moves);
 	}
-	game->img.moves++;
 }
 
 static void	walk_left(t_game *game)
@@ -54,8 +55,9 @@ static void	walk_left(t_game *game)
 		game->win.x -= 1;
 		mlx_put_image_to_window(game->win.mlx_ptr, game->win.win_ptr,
 			game->img.link_left, game->win.px, game->win.py);
+		game->img.moves++;
+		ft_printf("moves = %d\n", game->img.moves);
 	}
-	game->img.moves++;
 }
 
 static void	walk_up(t_game *game)
@@ -77,8 +79,9 @@ static void	walk_up(t_game *game)
 		game->win.y -= 1;
 		mlx_put_image_to_window(game->win.mlx_ptr, game->win.win_ptr,
 			game->img.link_back, game->win.px, game->win.py);
+		game->img.moves++;
+		ft_printf("moves = %d\n", game->img.moves);
 	}
-	game->img.moves++;
 }
 
 static void	walk_down(t_game *game)
@@ -100,8 +103,9 @@ static void	walk_down(t_game *game)
 		game->win.y += 1;
 		mlx_put_image_to_window(game->win.mlx_ptr, game->win.win_ptr,
 			game->img.link_face, game->win.px, game->win.py);
+		game->img.moves++;
+		ft_printf("moves = %d\n", game->img.moves);
 	}
-	game->img.moves++;
 }
 
 int	ft_keymap(int key, t_game *game)
@@ -116,6 +120,5 @@ int	ft_keymap(int key, t_game *game)
 		walk_right(game);
 	if (key == 1)
 		walk_down(game);
-	ft_printf("moves = %d\n", game->img.moves);
 	return (0);
 }

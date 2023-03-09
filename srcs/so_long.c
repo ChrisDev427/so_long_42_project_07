@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:49:24 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/08 17:21:07 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/03/09 14:32:53 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,5 @@ int	main(int argc, char **argv)
 	}
 	else
 		ft_error(&game, "Invalid arguments number\n");
-	system("leaks so_long");
 	return (0);
 }

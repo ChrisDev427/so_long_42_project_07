@@ -17,6 +17,5 @@ void	ft_error(t_game *game, char *s)
 	ft_putstr_fd("Error\n", 2);
 	ft_putstr_fd(s, 2);
 	free_str_tab(game->parse.map);
-	system("leaks so_long");
 	exit (EXIT_FAILURE);
 }
