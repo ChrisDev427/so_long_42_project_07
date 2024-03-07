@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_quit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:47:01 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/09 11:12:27 by chmassa          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:26:58 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,8 @@ void	ft_win(t_game *game)
 
 int	ft_quit(t_game *game)
 {
-	if (game->win)
-		mlx_destroy_window(game->mlx, game->win);
+	// if (game->win)
+		// mlx_destroy_window(game->mlx, game->win);
 	system("killall afplay 2> /dev/null");
 	exit(EXIT_SUCCESS);
-	return (0);
 }

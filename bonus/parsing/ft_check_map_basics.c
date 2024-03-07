@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_map_basics.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:38:43 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/09 11:09:53 by chmassa          ###   ########.fr       */
+/*   Updated: 2024/03/07 16:26:36 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static void	check_size(t_game *game)
 	int	x;
 	int	y;
 	int	len;
-
 	x = ft_strlen(game->map[0]);
 	y = 0;
 	while (game->map[y])
@@ -29,7 +28,7 @@ static void	check_size(t_game *game)
 	}
 	if (x < 6 || y < 5)
 		ft_error(game, "map size is too small\n");
-	if (x > 30 || y > 16)
+	if (x > 45 || y > 17)
 		ft_error(game, "map size is too big\n");
 }
 

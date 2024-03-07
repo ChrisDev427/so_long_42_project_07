@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_stats.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 19:04:35 by chmassa           #+#    #+#             */
-/*   Updated: 2023/03/09 14:35:06 by chmassa          ###   ########.fr       */
+/*   Updated: 2024/03/07 15:51:31 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	ft_rupee_collect(t_game *game)
 	ruby = ft_itoa(game->collected);
 	str = ft_strjoin(str, ruby);
 	free(ruby);
-	mlx_string_put(game->mlx, game->win, 128, 4, 255 * 256 * 256, str);
+	mlx_string_put(game->mlx, game->win, 128, 19, 255 * 256 * 256, str);
 	free(str);
 }
 
@@ -40,7 +40,7 @@ static void	ft_print_moves(t_game *game)
 	retrieve_nbr = ft_itoa(game->link_moves);
 	str = ft_strjoin(str, retrieve_nbr);
 	free(retrieve_nbr);
-	mlx_string_put(game->mlx, game->win, 13, 4, 255 * 256 * 256, str);
+	mlx_string_put(game->mlx, game->win, 13, 19, 255 * 256 * 256, str);
 	free(str);
 }
 
