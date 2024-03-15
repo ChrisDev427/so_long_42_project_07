@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 13:47:01 by chmassa           #+#    #+#             */
-/*   Updated: 2024/03/07 16:26:58 by chris            ###   ########.fr       */
+/*   Updated: 2024/03/07 16:50:20 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_win(t_game *game)
 	ft_print_img(game, game->win_img, (x / 2) * 64 -180, (y / 2) * 64 -128);
 }
 
-int	ft_quit(t_game *game)
+int	ft_quit()
 {
 	// if (game->win)
 		// mlx_destroy_window(game->mlx, game->win);

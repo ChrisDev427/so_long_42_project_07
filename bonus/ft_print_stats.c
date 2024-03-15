@@ -6,7 +6,7 @@
 /*   By: chris <chris@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 19:04:35 by chmassa           #+#    #+#             */
-/*   Updated: 2024/03/07 15:51:31 by chris            ###   ########.fr       */
+/*   Updated: 2024/03/07 16:51:16 by chris            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static void	ft_rupee_collect(t_game *game)
 	char	*ruby;
 	char	*str;
 
-	str = "ruby ";
+	str = "RUBY ";
 	ruby = ft_itoa(game->collected);
 	str = ft_strjoin(str, ruby);
 	free(ruby);
-	mlx_string_put(game->mlx, game->win, 128, 19, 255 * 256 * 256, str);
+	mlx_string_put(game->mlx, game->win, 128, 20, 256 * 256 * 256, str);
 	free(str);
 }
 
@@ -30,7 +30,7 @@ static void	ft_print_moves(t_game *game)
 	char	*retrieve_nbr;
 	char	*str;
 
-	str = "moves ";
+	str = "MOVES ";
 	if (game->moves > 4)
 	{
 		game->link_moves++;
@@ -40,7 +40,7 @@ static void	ft_print_moves(t_game *game)
 	retrieve_nbr = ft_itoa(game->link_moves);
 	str = ft_strjoin(str, retrieve_nbr);
 	free(retrieve_nbr);
-	mlx_string_put(game->mlx, game->win, 13, 19, 255 * 256 * 256, str);
+	mlx_string_put(game->mlx, game->win, 13, 20, 256 * 256 * 256, str);
 	free(str);
 }
 
